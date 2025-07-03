@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Code, Database, Cloud, Cpu, Mail, Phone, Linkedin, Github, ExternalLink, Award, MapPin, Calendar } from 'lucide-react';
 import facerecommand from './background/facerecommand.png';
+import ayurmithra from './background/ayurmithra.png';
+import rentaride from './background/rentaride.png';
+import netflix from './background/netflix.png';
+import mernstack from './background/mernstack.png';
+import face from './background/face.jpeg';
 
 
 const navLinks = [
@@ -32,13 +37,15 @@ const projects = [
     title: 'Serendib Gems - Gem Marketing Platform',
     tech: 'MERN Stack (MongoDB, Express.js, React, Node.js), Machine Learning, ChatBots',
     desc: 'Serendib Gems is a dynamic gem buying and selling platform designed to connect buyers and sellers of Ceylon gems. Built using the MERN stack, it offers a seamless, full-stack web experience with a focus on user-friendly interfaces and real-time interactions. The platform integrates AI-powered chatbots leveraging machine learning to provide detailed information about Ceylon gem identities, including origin, quality, and authenticity. Key features include secure transaction processing, gem catalog management, and personalized user experiences, enhancing trust and engagement in the gem trading ecosystem.',
-    category: 'Full Stack',
+    img: mernstack,
+    category: 'Web Development, Full Stack',
     color: 'from-emerald-400 to-cyan-400'
   },
   {
     title: 'Netflix Movie Recommender System',
     tech: 'Machine Learning, Python',
     desc: 'A sophisticated movie recommendation system inspired by Netflix, developed using machine learning algorithms to deliver personalized movie suggestions. By analyzing user preferences, viewing history, and patterns, the system employs collaborative filtering and content-based filtering techniques to recommend relevant movies. Built with Python and ML libraries, this project showcases expertise in data processing, algorithm design, and enhancing user engagement through tailored content delivery.',
+    img: netflix,
     category: 'Machine Learning',
     color: 'from-purple-400 to-pink-400'
   },
@@ -46,13 +53,15 @@ const projects = [
     title: 'AyurMitra - Drug Ordering System',
     tech: 'Java, HTML, CSS, JavaScript',
     desc: 'AyurMitra is an online drug ordering system designed to streamline access to Ayurvedic medicines. Developed using Java for robust backend logic and HTML, CSS, and JavaScript for an intuitive frontend, the platform enables users to browse, select, and order medicines with ease. Key features include a product catalog, secure payment integration, and order tracking, ensuring a seamless user experience while promoting accessibility to traditional healthcare solutions.',
-    category: 'Web Development',
+    img: ayurmithra,
+    category: 'Full Stack, Web Development',
     color: 'from-green-400 to-blue-400'
   },
   {
     title: 'Finance Tracker',
     tech: 'Kotlin',
     desc: 'Finance Tracker is a mobile application built with Kotlin to help users manage their personal finances effectively. The app allows users to track income, expenses, and savings goals with a clean, user-friendly interface. Features include budget categorization, expense visualization, and financial goal setting, empowering users to make informed financial decisions. This project demonstrates proficiency in mobile app development and UI/UX design tailored for Android platforms.',
+    img: facerecommand,
     category: 'Mobile Development',
     color: 'from-yellow-400 to-orange-400'
   },
@@ -60,27 +69,31 @@ const projects = [
     title: 'SureRide - Car Rental System',
     tech: 'PHP, HTML, JavaScript',
     desc: 'SureRide is a web-based car rental system designed to simplify vehicle booking and management. Built with PHP for server-side logic and HTML/JavaScript for a responsive frontend, the platform enables users to browse available vehicles, book rentals, and manage reservations. Key features include real-time availability checks, secure payment processing, and an admin dashboard for rental management, showcasing expertise in full-stack web development.',
-    category: 'Web Development',
+    img: facerecommand,
+    category: 'Full Stack, Web Development',
     color: 'from-blue-400 to-indigo-400'
   },
   {
     title: 'SkyLuxes - Airline Ticket Reservation System',
     tech: 'PHP, HTML, JavaScript',
     desc: 'SkyLuxes is an airline ticket reservation system that streamlines the process of booking flights. Developed using PHP for backend functionality and HTML/JavaScript for a dynamic frontend, the platform offers users the ability to search for flights, select seats, and complete bookings securely. Features include real-time flight availability, booking confirmation, and user account management, demonstrating skills in building scalable and user-centric web applications.',
-    category: 'Web Development',
+    img: facerecommand,
+    category: 'Full Stack, Web Development',
     color: 'from-cyan-400 to-blue-400'
   },
   {
     title: 'Rent A Ride',
     tech: 'Java, HTML, CSS, JavaScript',
     desc: 'Rent A Ride is a web-based platform for renting vehicles, offering a seamless experience for users to browse and book cars. Built with Java for robust backend processing and HTML, CSS, and JavaScript for an engaging frontend, the system includes features like vehicle search, booking management, and payment integration. The project highlights proficiency in creating responsive, full-stack applications with a focus on user convenience and operational efficiency.',
-    category: 'Full Stack',
+    img: rentaride,
+    category: 'Full Stack, Web Development',
     color: 'from-red-400 to-pink-400'
   },
   {
     title: 'Attendance Marking Using Face Recognition',
     tech: 'Machine Learning, Python, Computer Vision',
     desc: 'An innovative attendance marking system that leverages face recognition technology to automate attendance tracking. Built using Python and machine learning libraries for facial recognition, the system identifies individuals in real-time and logs attendance securely. Key features include high-accuracy face detection, integration with attendance databases, and a user-friendly interface, showcasing expertise in computer vision and AI-driven automation.',
+    img: facerecommand,
     category: 'AI/ML',
     color: 'from-indigo-400 to-purple-400'
   },
@@ -136,13 +149,13 @@ export default function App() {
       <section id="home" className="relative container mx-auto flex flex-col items-center justify-center min-h-screen px-4 text-center">
         <div className="relative z-10">
           <div className="mb-8 relative">
-            <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 p-1 animate-pulse">
-              <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
-                <Cpu className="w-20 h-20 text-cyan-400" />
+            <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 p-1">
+              <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
+                <img src={face} alt="Profile" className="w-full h-full object-cover rounded-full" style={{ opacity: 1 }} />
               </div>
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent ">
             Hi, I'm Mithila
           </h1>
           <div className="text-xl md:text-2xl font-medium mb-6 space-y-2">
@@ -221,7 +234,7 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, idx) => (
               <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                <img src={facerecommand} alt={project.title} className="object-cover w-full h-48" />
+                <img src={project.img} alt={project.title} className="object-cover w-full h-53" />
                 <div className="p-6 flex-1 flex flex-col">
                   <p className="text-gray-700 mb-4">{project.desc}</p>
                   <h3 className="text-2xl font-semibold mb-2 text-blue-700">{project.title}</h3>
@@ -279,7 +292,7 @@ export default function App() {
               <div className="flex items-center gap-6">
                 <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center flex-shrink-0">
                   <img 
-                    src="https://upload.wikimedia.org/wikipedia/en/8/8e/SLIIT_Logo.png" 
+                    src="https://en.wikipedia.org/wiki/File:SLIIT_Logo_Crest.png" 
                     alt="SLIIT Logo" 
                     className="w-16 h-16 object-contain"
                   />
