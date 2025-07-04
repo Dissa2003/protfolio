@@ -6,6 +6,8 @@ import rentaride from './background/rentaride.png';
 import netflix from './background/netflix.png';
 import mernstack from './background/mernstack.png';
 import face from './background/face.jpeg';
+import sureride from './background/sureride.png';
+import sliit from './background/sliit.png';
 
 
 const navLinks = [
@@ -17,19 +19,45 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
+// Skill logos (CDN or local if available)
+const skillLogos = {
+  'C/C++': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+  'HTML': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+  'Tailwind/CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
+  'SQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+  'Java': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+  'Kotlin': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg',
+  'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  'PHP': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+  'Dart': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg',
+  'React JS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  'Node JS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  'Express JS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+  'Flutter': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
+  'MySQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+  'SQLite': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg',
+  'MongoDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+  'GitHub': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+  'VS Code': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+  'Figma': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+  'Eclipse': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg',
+  'Android Studio': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg',
+  'MS Office': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoft/microsoft-original.svg',
+  'gitlab': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg',
+  'jupyter notebook': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg',
+};
+
 const skills = {
-  'Programming Languages': {
-    items: ['Java', 'Python', 'C', 'C++', 'Kotlin', 'JavaScript'],
-    icon: <Code className="w-6 h-6" />
-  },
-  'Web & App Technologies': {
-    items: ['React', 'Node.js', 'Express', 'MongoDB', 'Flutter', 'Firebase'],
-    icon: <Database className="w-6 h-6" />
-  },
-  'DevOps & Tools': {
-    items: ['Docker', 'Git', 'MySQL', 'HTML5', 'CSS3', 'Tailwind'],
-    icon: <Cloud className="w-6 h-6" />
-  },
+  'Programming Languages': [
+    'C/C++', 'HTML', 'Tailwind/CSS', 'SQL', 'Java', 'Kotlin', 'JavaScript', 'Python', 'PHP', 'Dart'
+  ],
+  'Frameworks and Databases': [
+    'React JS', 'Node JS', 'Express JS', 'Flutter', 'MySQL', 'SQLite', 'MongoDB'
+  ],
+  'Tools': [
+    'GitHub', 'VS Code', 'Figma', 'Eclipse', 'Android Studio', 'MS Office', 'gitlab', 'jupyter notebook'
+  ]
 };
 
 const projects = [
@@ -69,7 +97,7 @@ const projects = [
     title: 'SureRide - Car Rental System',
     tech: 'PHP, HTML, JavaScript',
     desc: 'SureRide is a web-based car rental system designed to simplify vehicle booking and management. Built with PHP for server-side logic and HTML/JavaScript for a responsive frontend, the platform enables users to browse available vehicles, book rentals, and manage reservations. Key features include real-time availability checks, secure payment processing, and an admin dashboard for rental management, showcasing expertise in full-stack web development.',
-    img: facerecommand,
+    img: sureride,
     category: 'Full Stack, Web Development',
     color: 'from-blue-400 to-indigo-400'
   },
@@ -247,36 +275,24 @@ export default function App() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="relative container mx-auto py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Technical Skills
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {Object.entries(skills).map(([category, { items, icon }]) => (
-              <div key={category} className="group">
-                <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-cyan-400/20 p-6 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-center mb-6">
-                    <div className="text-cyan-400 mr-3">
-                      {icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-cyan-400">{category}</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {items.map((skill, skillIdx) => (
-                      <span 
-                        key={skill} 
-                        className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium hover:scale-105 transition-transform cursor-pointer"
-                        style={{ animationDelay: `${skillIdx * 50}ms` }}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section id="skills" className="container mx-auto py-16 px-4">
+        <h2 className="text-3xl font-bold mb-8 text-blue-700">Skills</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {Object.entries(skills).map(([category, items]) => (
+            <div key={category} className="bg-white rounded-lg shadow p-6">
+              <h3 className="text-xl font-semibold mb-4 text-blue-600">{category}</h3>
+              <ul className="flex flex-wrap gap-3">
+                {items.map(skill => (
+                  <li key={skill} className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-gray-800 font-medium text-sm">
+                    {skillLogos[skill] && (
+                      <img src={skillLogos[skill]} alt={skill} className="w-6 h-6" />
+                    )}
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -292,7 +308,7 @@ export default function App() {
               <div className="flex items-center gap-6">
                 <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center flex-shrink-0">
                   <img 
-                    src="https://en.wikipedia.org/wiki/File:SLIIT_Logo_Crest.png" 
+                    src={sliit} 
                     alt="SLIIT Logo" 
                     className="w-16 h-16 object-contain"
                   />

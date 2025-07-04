@@ -19,8 +19,8 @@ This website showcases my skills, projects, education, and contact information. 
 ## Contact
 Feel free to reach out for any questions or opportunities!
 
-- **Email:** dilzhanyapa@gmail.com
-- **Phone:** +94 70 380 2 880
+- **Email:** gamagedissanayake1021@gmail.com
+- **Phone:** +94 74 332 0286
 
 ---
 © 2025 Mithila Dissa. All rights reserved. 
