@@ -370,7 +370,7 @@ export default function App() {
                     <div className="flex items-center gap-3">
                       <Linkedin className="w-5 h-5 text-cyan-400" />
                       <a 
-                        href="https://www.linkedin.com/in/dilzhanyapa" 
+                        href="https://www.linkedin.com/in/mithila-dissanayake-347209310/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-gray-300 hover:text-cyan-400 transition-colors"
