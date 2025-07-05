@@ -8,6 +8,8 @@ import mernstack from './background/mernstack.png';
 import face from './background/face.jpeg';
 import sureride from './background/sureride.png';
 import sliit from './background/sliit.png';
+import portfolio from './background/portfolio.png';
+import samancanefurniture from './background/samancanefunrniture.png';
 
 
 const navLinks = [
@@ -124,6 +126,22 @@ const projects = [
     img: facerecommand,
     category: 'AI/ML',
     color: 'from-indigo-400 to-purple-400'
+  },
+  {
+    title: 'Personal Portfolio Website',
+    tech: 'React, Vite, Tailwind CSS, JavaScript',
+    desc: 'A modern, responsive portfolio website showcasing my skills, projects, and professional journey. Built with React and Vite for optimal performance, styled with Tailwind CSS for a clean and professional design. Features include smooth animations, responsive layout, and interactive project showcases. The portfolio demonstrates proficiency in modern front-end development practices, component-based architecture, and responsive design principles.',
+    img: portfolio,
+    category: 'Frontend Development',
+    color: 'from-violet-400 to-purple-400'
+  },
+  {
+    title: 'Saman Cane Furniture - E-commerce Platform',
+    tech: 'React, HTML, CSS, JavaScript',
+    desc: 'A comprehensive e-commerce platform for Saman Cane Furniture, specializing in cane and rattan furniture sales. Built with React for dynamic user interactions and modern HTML/CSS for responsive design. The platform features product catalog management, shopping cart functionality, secure payment integration, and user account management. Key highlights include intuitive product browsing, detailed product information, and seamless checkout process, showcasing expertise in building user-centric e-commerce solutions.',
+    img: samancanefurniture,
+    category: 'E-commerce, Frontend Development',
+    color: 'from-amber-400 to-orange-400'
   },
 ];
 
