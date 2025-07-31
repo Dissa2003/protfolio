@@ -10,7 +10,7 @@ import sureride from './background/sureride.png';
 import sliit from './background/sliit.png';
 import portfolio from './background/portfolio.png';
 import samancanefurniture from './background/samancanefunrniture.png';
-import skyluxe from './background/skyluxe.png';
+import skyluxe from './background/skyluxe.jpeg';
 import finance from './background/finance.png';
 
 
@@ -318,16 +318,18 @@ export default function App() {
             Featured Projects
           </h2>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {projects.map((project, idx) => (
-              <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                <img src={project.img} alt={project.title} className="object-cover w-full h-48 md:h-53" />
-                <div className="p-4 md:p-6 flex-1 flex flex-col">
-                  <p className="text-gray-700 mb-4 text-sm md:text-base">{project.desc}</p>
-                  <h3 className="text-xl md:text-2xl font-semibold mb-2 text-blue-700">{project.title}</h3>
-                  <div className="text-xs md:text-sm text-gray-500 mb-2">{project.tech}</div>
-                </div>
-              </div>
-            ))}
+                         {projects.map((project, idx) => (
+               <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+                 <div className="flex-shrink-0">
+                   <img src={project.img} alt={project.title} className="object-contain w-full h-48 md:h-64 bg-gray-100" />
+                 </div>
+                 <div className="p-4 md:p-6 flex-1 flex flex-col">
+                   <h3 className="text-xl md:text-2xl font-semibold mb-2 text-blue-700">{project.title}</h3>
+                   <div className="text-xs md:text-sm text-gray-500 mb-3">{project.tech}</div>
+                   <p className="text-gray-700 text-sm md:text-base flex-1">{project.desc}</p>
+                 </div>
+               </div>
+             ))}
           </div>
         </div>
       </section>
