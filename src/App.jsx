@@ -10,6 +10,8 @@ import sureride from './background/sureride.png';
 import sliit from './background/sliit.png';
 import portfolio from './background/portfolio.png';
 import samancanefurniture from './background/samancanefunrniture.png';
+import skyluxe from './background/skyluxe.png';
+import finance from './background/finance.png';
 
 
 const navLinks = [
@@ -91,7 +93,7 @@ const projects = [
     title: 'Finance Tracker',
     tech: 'Kotlin',
     desc: 'Finance Tracker is a mobile application built with Kotlin to help users manage their personal finances effectively. The app allows users to track income, expenses, and savings goals with a clean, user-friendly interface. Features include budget categorization, expense visualization, and financial goal setting, empowering users to make informed financial decisions. This project demonstrates proficiency in mobile app development and UI/UX design tailored for Android platforms.',
-    img: facerecommand,
+    img: finance,
     category: 'Mobile Development',
     color: 'from-yellow-400 to-orange-400'
   },
@@ -107,7 +109,7 @@ const projects = [
     title: 'SkyLuxes - Airline Ticket Reservation System',
     tech: 'PHP, HTML, JavaScript',
     desc: 'SkyLuxes is an airline ticket reservation system that streamlines the process of booking flights. Developed using PHP for backend functionality and HTML/JavaScript for a dynamic frontend, the platform offers users the ability to search for flights, select seats, and complete bookings securely. Features include real-time flight availability, booking confirmation, and user account management, demonstrating skills in building scalable and user-centric web applications.',
-    img: facerecommand,
+    img: skyluxe,
     category: 'Full Stack, Web Development',
     color: 'from-cyan-400 to-blue-400'
   },
